@@ -61,12 +61,14 @@ app.get("/weather", (req, res) => {
       forecast(
         latitude,
         longitude,
-        (error, { description, temperature, humidity } = {}) => {
+        (error, { description, temperature, humidity, dayType, time } = {}) => {
           if (error) {
             return res.send({ error });
           } else {
             res.send({
-              forecast: `${description}. At a temperature of ${temperature} and Humidity of ${humidity}`,
+              forecast: `It is ${(dayType = "no"
+                ? "evening"
+                : "morning")} and the time is ${time} . ${description}. At a temperature of ${temperature} and Humidity of ${humidity}`,
               location,
               address,
             });
