@@ -7,7 +7,7 @@ const forecast = require("./utils/forecast");
 // console.log(path.join(__dirname, "../public"));
 
 const app = express();
-const port = process.env.PORT || 3000;
+const port = process.env.PORT || 3000; //process.env.PORT is used by Heroku
 
 // Define paths for Express config
 const publicDirectorPath = path.join(__dirname, "../public");

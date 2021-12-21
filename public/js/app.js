@@ -1,8 +1,8 @@
-fetch("http://puzzle.mead.io/puzzle").then((response) => {
-  response.json().then((data) => {
-    console.log("data", data);
-  });
-});
+// fetch("http://puzzle.mead.io/puzzle").then((response) => {
+//   response.json().then((data) => {
+//     console.log("data", data);
+//   });
+// });
 
 const fetchWeather = (address, callback) => {
   fetch(`/weather?address=${address}`).then((res) => {
